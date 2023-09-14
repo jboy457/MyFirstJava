@@ -1,0 +1,56 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Pyramid",
+      "request": "launch",
+      "mainClass": "Pyramid",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "OnceUponTime",
+      "request": "launch",
+      "mainClass": "OnceUponTime",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "TaiwoAdejareA0Q1",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA0Q1",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "Test",
+      "request": "launch",
+      "mainClass": "Test",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "Hello",
+      "request": "launch",
+      "mainClass": "Hello",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "name": "Simple Debug (Launch) - Java",
+      "type": "java",
+      "request": "launch",
+      "console": "internalConsole",
+      "stepFilters": {
+        "skipClasses": [
+          "java.*",
+          "$JDK",
+          "junit.*",
+          "Thread"
+        ],
+        "skipSynthetics": false,
+        "skipStaticInitializers": false,
+        "skipConstructors": false
+      }
+    }
+  ]
+}
