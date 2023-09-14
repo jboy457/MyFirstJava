@@ -3,7 +3,7 @@ public class Pyramid {
         int pyramidBase = 230; // Base length of the pyramid
         int pyramidHeight = 146; // Height of the pyramid
 
-        int pyramidArea = calcArea(pyramidBase, pyramidBase) // Calculate the base area of the pyramid
+        int pyramidArea = calcArea(pyramidBase, pyramidBase); // Calculate the base area of the pyramid
 
         int pyramidVolume = calcVolume(pyramidArea, pyramidHeight); // Calculate the volume of the pyramid
 
