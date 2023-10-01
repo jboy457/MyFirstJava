@@ -1,27 +1,32 @@
-/*
-* COMP 1010 SECTION A01
-* INSTRUCTOR: Dr. Heather Matheson
-* STUDENT NUMBER: 7980132
-* ASSIGNMENT: Assignment 1
-* QUESTION: Question 1
-*
-* PURPOSE: Powered by Apples [12 points]
-*/
+import java.util.Scanner;
 
-
-public class TaiwoAdejareA1Q1 {
+public class TaiwoAdejareA1Q2 {
     public static void main(String[] args) {
+        /*
+         * Question 2 (Get User Input)
+         * Purpose: To get users input and use it for question 1
+         */
+        Scanner scnr = new Scanner(System.in);
+        // Selected food item name from the url below
+        String foodItem = "Brownie, Chocolate Walnut, Frozen, Jenny Craig";
+        System.out.print("How many " + foodItem + " did you eat? ");
+        int numOfFoodItem = scnr.nextInt(); // Number of food Item eaten.
+        System.out.print("How much do you weigh, in kg? ");
+        double userWeightInKg = scnr.nextInt(); // User weight in kilogram(kg)
+        System.out.print("How tall are you, in cm? ");
+        double userHeight = scnr.nextInt(); // User's given height in centimeter
+        System.out.print("What is the track diameter, in metres? ");
+        double trackDiameter = scnr.nextInt(); // Diameter of the track
+        System.out.println("\n");
+
+        scnr.close();
         /*
          * Question 1a (Calculate Intake)
          * Purpose: Calculate the total calories taken
          * URL: https://www.webmd.com/diet/healthtool-food-calorie-counter
          */
 
-        // Selected food item name from the url above
-        String foodItem = "Brownie, Chocolate Walnut, Frozen, Jenny Craig";
         int caloriesPerItem = 180; // Number of calories per food item
-        int numOfFoodItem = 30; // Number of food Item eaten.
-
         int totalCalories = caloriesPerItem * numOfFoodItem; // Calculate total calories taken.
         System.out.println(numOfFoodItem + " " + foodItem + " contain a total of " + totalCalories + " calories.");
 
@@ -45,7 +50,6 @@ public class TaiwoAdejareA1Q1 {
         double yIntercept = caloriesPerHour1 - (burnRate * weight1); // yIntercept = b = y1 - (m * x1)
 
         // Convert user weight to pounds(lbs)
-        double userWeightInKg = 95; // User weight in kilogram(kg)
         double userWeightInLbs = userWeightInKg * KG_TO_LBS; // User weight in pounds(lbs)
         System.out.printf("You are " + userWeightInKg + " Kilograms or %.2f pounds.\n", userWeightInLbs);
 
@@ -80,7 +84,6 @@ public class TaiwoAdejareA1Q1 {
         final double CM_TO_METER = 0.01; // Converstion rate from Centimeter to meter
         final double KM_TO_METER = 1000; // Conversion rate of Kilometer to meter
 
-        double userHeight = 30; // User's given height in centimeter
         double userHeightInM = userHeight * CM_TO_METER; // Convert user height to meter.
 
         double strideLength = userHeightInM * STRIDE_RATIO; // stride length = heigiht * 0.43
@@ -94,7 +97,6 @@ public class TaiwoAdejareA1Q1 {
          * Question 1e (How many laps)
          * Purpose: Calculate the number of laps it will take to burn the caloires.
          */
-        double trackDiameter = 200; // Diameter of the track
 
         // Calcualte cirmcumference of the circular track
         double oneLapInM = Math.PI * trackDiameter; // circumference = 2πr = πd since d = 2r
