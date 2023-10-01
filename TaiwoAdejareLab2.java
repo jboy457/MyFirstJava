@@ -7,8 +7,8 @@ public class TaiwoAdejareLab2 {
         double houseLength = 0; // Length of the house
         double houseWidth = 0; // Width of the house
 
-        double totalLength = 20; // Length of the total Area
-        double totalWidth = 60; // Width of the total Area
+        double totalLength = 10; // Length of the total Area
+        double totalWidth = 30; // Width of the total Area
 
         // Calculate area of house and total area
         double houseArea = calcArea(houseLength, houseWidth);
