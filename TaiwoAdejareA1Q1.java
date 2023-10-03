@@ -7,8 +7,6 @@
 *
 * PURPOSE: Powered by Apples [12 points]
 */
-
-
 public class TaiwoAdejareA1Q1 {
     public static void main(String[] args) {
         /*

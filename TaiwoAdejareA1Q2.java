@@ -1,3 +1,12 @@
+/*
+* COMP 1010 SECTION A01
+* INSTRUCTOR: Dr. Heather Matheson
+* STUDENT NUMBER: 7980132
+* ASSIGNMENT: Assignment 1
+* QUESTION: Question 2
+*
+* PURPOSE: Powered By Apples with User Input [5 points]
+*/
 import java.util.Scanner;
 
 public class TaiwoAdejareA1Q2 {
@@ -11,12 +20,16 @@ public class TaiwoAdejareA1Q2 {
         String foodItem = "Brownie, Chocolate Walnut, Frozen, Jenny Craig";
         System.out.print("How many " + foodItem + " did you eat? ");
         int numOfFoodItem = scnr.nextInt(); // Number of food Item eaten.
+
         System.out.print("How much do you weigh, in kg? ");
         double userWeightInKg = scnr.nextInt(); // User weight in kilogram(kg)
+
         System.out.print("How tall are you, in cm? ");
         double userHeight = scnr.nextInt(); // User's given height in centimeter
+
         System.out.print("What is the track diameter, in metres? ");
         double trackDiameter = scnr.nextInt(); // Diameter of the track
+        
         System.out.println("\n");
 
         scnr.close();
