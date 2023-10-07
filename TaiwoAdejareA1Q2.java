@@ -23,13 +23,13 @@ public class TaiwoAdejareA1Q2 {
         int numOfFoodItem = scnr.nextInt();
 
         System.out.print("How much do you weigh, in kg? ");
-        double userWeightInKg = scnr.nextInt();
+        double userWeightInKg = scnr.nextDouble();
 
         System.out.print("How tall are you, in cm? ");
-        double userHeight = scnr.nextInt();
+        double userHeight = scnr.nextDouble();
 
         System.out.print("What is the track diameter, in metres? ");
-        double trackDiameter = scnr.nextInt();
+        double trackDiameter = scnr.nextDouble();
 
         System.out.println("\n");
 
@@ -67,7 +67,7 @@ public class TaiwoAdejareA1Q2 {
         
         // Convert user weight to pounds(lbs)
         double userWeightInLbs = userWeightInKg * KG_TO_LBS;
-        System.out.printf("You are " + userWeightInKg + " Kilograms or %.2f pounds.\n", userWeightInLbs);
+        System.out.printf("You are %.0f Kilograms or %.2f pounds.\n", userWeightInKg, userWeightInLbs);
 
         // Calculate user's burn rate
         double userBurnRate = (BURN_RATE * userWeightInLbs) + Y_INTERCEPT; // user burn rate in calories/hr = y = mx + b

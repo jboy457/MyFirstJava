@@ -46,7 +46,7 @@ public class TaiwoAdejareA1Q1 {
         // Convert user weight to pounds(lbs)
         double userWeightInKg = 75;
         double userWeightInLbs = userWeightInKg * KG_TO_LBS;
-        System.out.printf("You are " + userWeightInKg + " Kilograms or %.2f pounds.\n", userWeightInLbs);
+        System.out.printf("You are %.0f Kilograms or %.2f pounds.\n", userWeightInKg, userWeightInLbs);
 
         // Calculate user's burn rate
         double userBurnRate = (BURN_RATE * userWeightInLbs) + Y_INTERCEPT; // user burn rate in calories/hr = y = mx + b
