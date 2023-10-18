@@ -84,6 +84,7 @@ public class TaiwoAdejareA2Q1 {
         System.out.printf("%.1f minus %.1f should equal 3.0, got %.1f\n", test1Num1, test1Num2, subtract(test1Num1, test1Num2));
         System.out.printf("%.1f times %.1f should equal 18.0, got %.1f\n", test1Num1, test1Num2, multiply(test1Num1, test1Num2));
         System.out.printf("%.1f divided by %.1f should equals 2.0, got %.1f\n", test1Num1, test1Num2, divide(test1Num1, test1Num2));
+        System.out.println("------ Test Case 1 Ended --------\n");
 
         // Test Case 2
         double test2Num1 = 0;
@@ -94,6 +95,7 @@ public class TaiwoAdejareA2Q1 {
         System.out.printf("%.1f minus %.1f should equal -3.0, got %.1f\n", test2Num1, test2Num2, subtract(test2Num1, test2Num2));
         System.out.printf("%.1f times %.1f should equal 0.0, got %.1f\n", test2Num1, test2Num2, multiply(test2Num1, test2Num2));
         System.out.printf("%.1f divided by %.1f should equals 0, got %.1f\n", test2Num1, test2Num2, divide(test2Num1, test2Num2));
+        System.out.println("------ Test Case 2 Ended --------");
     }
 
 
