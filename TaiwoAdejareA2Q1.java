@@ -26,6 +26,9 @@ public class TaiwoAdejareA2Q1 {
         System.out.printf("Division: %.2f\n", divide(num1, num2));
         System.out.println("The program terminated normally.");
 
+        // Uncomment to run test;
+        testOperations();
+
         keyIn.close();
     }
 

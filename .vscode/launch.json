@@ -2,6 +2,76 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TaiwoAdejareA2Q3",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA2Q3",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "TaiwoAdejareA2Q2",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA2Q2",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "TaiwoAdejareA2Q1",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA2Q1",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "TaiwoAdejareA1Q3",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA1Q3",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "TaiwoAdejareA1Q2",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA1Q2",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "TaiwoAdejareA1Q1",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA1Q1",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "Lab3",
+      "request": "launch",
+      "mainClass": "Lab3",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "RainFall",
+      "request": "launch",
+      "mainClass": "RainFall",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "LakeRainfallCalculator",
+      "request": "launch",
+      "mainClass": "LakeRainfallCalculator",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "TaiwoAdejareLab2",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareLab2",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
       "name": "Pyramid",
       "request": "launch",
       "mainClass": "Pyramid",

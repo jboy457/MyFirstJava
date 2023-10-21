@@ -26,8 +26,10 @@ public class TaiwoAdejareA2Q2 {
         System.out.print("Enter the loan period in years: ");
         double periodInYear = keyIn.nextDouble();
 
+
         printMortgageSummary(loanAmount, intrestRate, periodInYear);
 
+        // Print method to test the "calculateMortgage" function.
         // testSuite();
 
         keyIn.close();
@@ -38,7 +40,7 @@ public class TaiwoAdejareA2Q2 {
     * @paramters {double amount(loan amount), double rate(intrest rate), double period(loan duration)} 
     * @returns double (monthlyPaymentAmount) 
     * @process - Converted yearlyRate to decimal which converted to montly rate. I also converted the loan duration(periodInMonth) in years to month.
-    * @calulation {(monthlyRates * loanAmont) / (1 - (1 + monthlyRates) - monthlyPayments)} 
+    * @calulation {(monthlyRates * loanAmont) / (1 - (1 + monthlyRates)^(-monthlyPayments))} 
     */
     static double calculateMortgage(double amount, double rate, double period) {
         double yearlyRate = rate / PERCENT;
@@ -63,7 +65,7 @@ public class TaiwoAdejareA2Q2 {
         System.out.printf("\n%14s is a summary of your loan based on the data provided:\n", "Here");
         System.out.printf("\nLoan Amount: %.2f", amount);
         System.out.printf("\nInterest Rate: %.2f%%", rate);
-        System.out.printf("\nLoan Period: %.2f years\n", period);
+        System.out.printf("\nLoan Period: %.0f years\n", period);
 
         double monthlyPayment = calculateMortgage(amount, rate, period);
         double totalPayment = monthlyPayment * (period * YEAR_TO_MONTH); // monthlyPayment * totalMonths
@@ -78,6 +80,12 @@ public class TaiwoAdejareA2Q2 {
         System.out.println("\nThe program terminated normally.");
     }
 
+    /*
+    * "testSuite" method test the calculate mortgage function....
+    * @paramters - No parameter!
+    * @returns void
+    * @process - Created two test cases and tested the calculateMortgage method.
+    */
     static void testSuite() {
         // Test Case 1
         System.out.println("------ Test Case 1 Started --------");
