@@ -1,3 +1,13 @@
+/*
+* COMP 1010 SECTION A01
+* INSTRUCTOR: Dr. Heather Matheson
+* STUDENT NUMBER: 7980132
+* ASSIGNMENT: Assignment 3
+* QUESTION: Question 1
+*
+* PURPOSE: Feeding your pet dog [7 Marks]
+*/
+
 import java.util.Scanner;
 
 public class TaiwoAdejareA3Q1 {
@@ -311,6 +321,13 @@ public class TaiwoAdejareA3Q1 {
     }
 
 
+    /*
+     * "printFoodAmount" method should display the amount of cup to fead your dog.
+     * 
+     * @paramters {double foodAmount}
+     * 
+     * @returns void ()
+     */
     static void printFoodAmount(double foodAmount) {
         System.out.printf("\n🐶 To keep your dog happy and healthy, we recommend feeding them around %.1f cups of food per day.", foodAmount);
     }
