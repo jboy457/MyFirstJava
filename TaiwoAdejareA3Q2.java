@@ -91,50 +91,52 @@ public class TaiwoAdejareA3Q2 {
          * Step 3: Drop dice that after score is added.
          */
 
+        final int NOT_FOUND = -1;
+
         // Check if the diceInput matches 1 - 6 values
         if (diceToUpdate.equals(ONE_TO_SIX)) {
             diceScore += P_1TO6;
-            diceToUpdate = diceToUpdate.replace("123456", ""); 
+            diceToUpdate = diceToUpdate.replace(ONE_TO_SIX, ""); 
         }
 
         // Check if the diceInput matches 3 ones.
-        if (diceToUpdate.indexOf(THREE_ONE) != -1) {
+        if (diceToUpdate.indexOf(THREE_ONE) != NOT_FOUND) {
             diceScore += P_3ONE;
             diceToUpdate = diceToUpdate.replace(THREE_ONE, "");
         }
         
         // Check if the diceInput matches 3 six;
-        if (diceToUpdate.indexOf(THREE_SIX) != -1) {
+        if (diceToUpdate.indexOf(THREE_SIX) != NOT_FOUND) {
             diceScore += P_3SIX;
             diceToUpdate = diceToUpdate.replace(THREE_SIX, "");
         }
 
         // Check if the diceInput matches 3 fives;
-        if (diceToUpdate.indexOf(THREE_FIVE) != -1) {
+        if (diceToUpdate.indexOf(THREE_FIVE) != NOT_FOUND) {
             diceScore += P_3FIVE;
             diceToUpdate = diceToUpdate.replace(THREE_FIVE, "");
         }
 
         // Check if the diceInput matches 3 fours;
-        if (diceToUpdate.indexOf(THREE_FOUR) != -1) {
+        if (diceToUpdate.indexOf(THREE_FOUR) != NOT_FOUND) {
             diceScore += P_3FOUR;
             diceToUpdate = diceToUpdate.replace(THREE_FOUR, "");
         }
 
         // Check if the diceInput matches 3 threes;
-        if (diceToUpdate.indexOf(THREE_THREE) != -1) {
+        if (diceToUpdate.indexOf(THREE_THREE) != NOT_FOUND) {
             diceScore += P_3THREE;
             diceToUpdate = diceToUpdate.replace(THREE_THREE, "");
         }
 
         // Check if the diceInput matches 3 twos;
-        if (diceToUpdate.indexOf(THREE_TWO) != -1) {
+        if (diceToUpdate.indexOf(THREE_TWO) != NOT_FOUND) {
             diceScore += P_3TWO;
             diceToUpdate = diceToUpdate.replace(THREE_TWO, "");
         }
 
         // Check if the diceInput matches One
-        if (diceToUpdate.indexOf(ONE) != -1) {
+        if (diceToUpdate.indexOf(ONE) != NOT_FOUND) {
             // Check if theres mutiple ones other than 111 e.g 11
             int digitCount = diceToUpdate.length() - diceToUpdate.replace(ONE, "").length();
 
@@ -144,11 +146,11 @@ public class TaiwoAdejareA3Q2 {
             } else {
                 diceScore += digitCount * P_ONE;
             }
-            diceToUpdate = diceToUpdate.replace("1", "");
+            diceToUpdate = diceToUpdate.replace(ONE, "");
         }
 
         // Check if the diceInput matches One
-        if (diceToUpdate.indexOf(FIVE) != -1) {
+        if (diceToUpdate.indexOf(FIVE) != NOT_FOUND) {
             // Check if theres mutiple fives other than 555 e.g 55
             int digitCount = diceToUpdate.length() - diceToUpdate.replace("1", "").length();
 
