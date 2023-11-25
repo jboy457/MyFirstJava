@@ -5,14 +5,14 @@
 * ASSIGNMENT: Assignment 4
 * QUESTION: Question 1
 *
-* PURPOSE: Adventure game, NetHack! [10 Marks]
+* PURPOSE: Adventure game, NetHack!
 */
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class TaiwoAdejareA4Q1 {
-    // Room Bouderies
+public class TaiwoAdejareA4 {
+    // Room Bounderies
     final static int MAX_HEIGHT = 10;
     final static int MAX_WIDTH = 10;
     final static int MIN_HEIGHT = 5;
@@ -24,15 +24,16 @@ public class TaiwoAdejareA4Q1 {
     final static char LEFT_MOVE = 'l';
     final static char RIGHT_MOVE = 'r';
 
-    // Game Character
-    final static char OCTOTHORPS = '#';
+    // Game Characters
+    final static char OCTOTHORPS = '#'; // Border
     final static char GRID_BUG = 'x';
     final static char GOLD = '$';
     final static char HOLE = '^';
-    final static char PLAYER = '@';
+    final static char PLAYER = '@'; // Adventuerer
     final static char FLOOR = '.';
 
-    // Game properties
+    // Game properties - Origin of Coordinates (Top-left Corner (0,0) , Bottom-right
+    // Corner (roomWidth - 1, roomHeight - 1))
     static int x_hole, y_hole, x_gold, y_gold, x_bug, y_bug, x_player, y_player; // coordinates for gold, bug, player
     static int roomHeight, roomWidth; // Generated Random room height and width within the range.
     static boolean goldPicked = false;
@@ -60,6 +61,7 @@ public class TaiwoAdejareA4Q1 {
      * @returns void.
      */
     public static void playGame(Scanner scnr, Random random) {
+        System.out.println("Welcome to the dungeon!");
         // Generates inital random coordinate for game enviroment.
         generateRoom(random);
 
@@ -233,7 +235,7 @@ public class TaiwoAdejareA4Q1 {
             }
 
             // Pass check if all character after the space is a number.
-            if ((i > 1) && Character.isDigit(move.charAt(i)) && Integer.parseInt(move.substring(i)) > 0) {
+            if ((i > 1) && Character.isDigit(move.charAt(i)) && Integer.parseInt(move.substring(i, i + 1)) > 0) {
                 stepValid = true;
             }
 
@@ -317,25 +319,57 @@ public class TaiwoAdejareA4Q1 {
     }
 
     /*
-     * "moveBug" method is randomly move the bug by one step either up or down or diagonally.
+     * "moveBug" method is randomly move the bug by one step either up or down or
+     * diagonally.
      * 
      * @paramters {Random random}
      * 
      * @returns void.
      */
     public static void moveBug(Random random) {
-        // Randomly generate the number of steps to be moved on both coordinate.
-        int x_move = random.nextInt(3) - 1;
-        int y_move = random.nextInt(3) - 1;
+        int x_newBug = 0;
+        int y_newBug = 0;
 
-        // Update the coordinate of the bug but make sure its still within room.
-        if (x_move + x_bug >= 0 && x_move + x_bug < roomWidth) {
-            x_bug += x_move;
+        // Choose whether to move it othogornal - true or diagonal - false
+        boolean isOthogornal = random.nextBoolean();
+
+        if (isOthogornal) {
+            x_newBug = x_bug + moveBugDirection(random, 3);
+            y_newBug = y_bug + moveBugDirection(random, 0);
+        } else {
+            x_newBug = x_bug + moveBugDirection(random, 0);
+            y_newBug = y_bug + moveBugDirection(random, 0);
         }
 
-        if (y_move + y_bug >= 0 && y_move + y_bug < roomHeight) {
-            y_bug += y_move;
+        // Check if position is within room
+        if (x_newBug >= 0 && x_newBug < roomWidth && y_newBug >= 0 && y_newBug < roomHeight) {
+            // Update bug postion
+            x_bug = x_newBug;
+            y_bug = y_newBug;
         }
+    }
+
+    /*
+     * "moveBugDirection" method is randomly return where the move should move (left, right, up or down.)
+     * 
+     * @paramters {Random random, int bounds}
+     * 
+     * @returns void.
+     */
+    public static int moveBugDirection(Random rand, int bounds) {
+        final int MAX_BUG_STEP = 1;
+
+        int direction;
+        if (bounds != 0) {
+            direction = rand.nextInt(bounds) - 1; // return a random value [-1, 0, 1]
+        } else {
+            if (rand.nextBoolean()) {
+                direction = -MAX_BUG_STEP; // Move backwards
+            } else {
+                direction = MAX_BUG_STEP; // Move forwards
+            }
+        }
+        return direction;
     }
 
     /*

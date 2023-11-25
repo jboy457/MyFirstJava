@@ -2,6 +2,62 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TaiwoAdejareA4",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA4",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "LabTest",
+      "request": "launch",
+      "mainClass": "LabTest",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "TaiwoAdejareA4Q1",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA4Q1",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "Week8CheckerboardDemo",
+      "request": "launch",
+      "mainClass": "Week8CheckerboardDemo",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "BreakAndContinue",
+      "request": "launch",
+      "mainClass": "BreakAndContinue",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "TaiwoAdejareA3Q2",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA3Q2",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "ProbabilityPair",
+      "request": "launch",
+      "mainClass": "ProbabilityPair",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "TaiwoAdejareA3Q1",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA3Q1",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
       "name": "TaiwoAdejareA2Q3",
       "request": "launch",
       "mainClass": "TaiwoAdejareA2Q3",
