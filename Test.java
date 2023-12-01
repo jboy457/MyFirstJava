@@ -1,27 +1,22 @@
-import java.util.Scanner;
-
 public class Test {
-    public static void main(String [] args){
-        Scanner scnr = new Scanner(System.in);
-        int result;
-        int stop;
-        int a;
-        int b;
-        
-        stop = scnr.nextInt();
-        result = 0;
-        
-        for (a = 0; a < 2; ++a) {
-           System.out.print(a + ": ");
-           for (b = 0; b < 3; ++b) {
-              result += a + b;
-              if (result > stop) {
-                 System.out.print("_ ");
-                 continue;
-              }
-              System.out.print(result + ",");
-           }
-           System.out.println();
-       }
-     }
+   public static void main(String[] args) {
+      binarySearch(null, 0, 0);
+   }
+
+   static int binarySearch(int[] list, int size, int key) {
+      int lo = 0, hi = size - 1;
+      int index = -1;
+      boolean found = false;
+      while (lo <= hi && !found) {
+         int mid = (lo + hi) / 2;
+         if (list[mid] == key) {
+            index = mid;
+            found = true;
+         } else if (list[mid] < key)
+            lo = mid + 1;
+         else
+            hi = mid - 1;
+      } // while
+      return index;
+   }// binarySearch
 }
