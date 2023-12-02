@@ -2,6 +2,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TaiwoAdejareA5Q2",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA5Q2",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
+      "name": "TaiwoAdejareA5Q1",
+      "request": "launch",
+      "mainClass": "TaiwoAdejareA5Q1",
+      "projectName": "school_7399a02c"
+    },
+    {
+      "type": "java",
       "name": "TaiwoAdejareA4",
       "request": "launch",
       "mainClass": "TaiwoAdejareA4",
